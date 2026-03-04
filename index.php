@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -37,6 +36,8 @@
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            overflow: hidden;height: 300px;
+            border: none;
             overflow: hidden;
         }
 
@@ -46,9 +47,11 @@
         }
 
         .card img {
-            height: 200px;
+            width: 100%;
+            height: 220px;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
         .card:hover img {
@@ -66,11 +69,9 @@
 
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             
-            <!-- Brand kiri -->
             <a class="navbar-brand fw-bold" href="#">BeritaKu</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -79,7 +80,6 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
 
-                <!-- Menu kiri -->
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Home</a>
@@ -89,7 +89,6 @@
                     </li>
                 </ul>
 
-                <!-- Search kanan -->
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Cari berita..." aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Cari</button>
@@ -99,22 +98,21 @@
         </div>
     </nav>
 
-    <!-- Konten -->
     <div class="container mt-5">
         <div class="berita-container">
             <h1>BERITA TERBARU</h1>
 
             <div class="row g-4">
                 
-                <div class="col-md-4">
+                <a href="detail.php?id=1" style="text-decoration:none; color:black;">
                     <div class="card">
-                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="gambar1">
+                        <img src="picture/1.jpg" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">Judul Berita 1</h5>
-                            <p class="card-text">Deskripsi singkat berita pertama.</p>
+                            <h5 class="card-title">Transformers V</h5>
+                            <p class="card-text">Film Transformers V dirilis pada tahun 2017.</p>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <div class="col-md-4">
                     <div class="card">
@@ -136,11 +134,20 @@
                     </div>
                 </div>
 
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="gambar4">
+                        <div class="card-body">
+                            <h5 class="card-title">Judul Berita 4</h5>
+                            <p class="card-text">Deskripsi singkat berita keempat.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
