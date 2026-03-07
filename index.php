@@ -1,78 +1,106 @@
+```html
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita</title>
+    <title>Berita Film</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #00000033;
+            background: #f4f4f4;
         }
 
         .navbar {
-            background-color: #333 !important;
+            background: #222 !important;
         }
 
-        .navbar-brand, .nav-link {
-            color: white !important;
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .hero-film {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .hero-film img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 80px;
+            transform: translateY(-50%);
+            color: white;
+            max-width: 500px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hero-text p {
+            margin-top: 15px;
+            margin-bottom: 20px;
         }
 
         .berita-container {
             background: white;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
         .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            overflow: hidden;height: 300px;
             border: none;
             overflow: hidden;
+            transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         .card img {
-            width: 100%;
             height: 220px;
             object-fit: cover;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            transition: 0.3s;
         }
 
         .card:hover img {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
-        .berita-container {
-            color: rgb(0, 0, 0);
-            background-color: rgba(38, 38, 38, 0.66);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 22, 224, 0.1);
+
+        #filmSlide img {
+            height: 250px;
+            object-fit: cover;
+        }
+        .button {
+            color: #000;
+            border: none;
         }
     </style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            
-            <a class="navbar-brand fw-bold" href="#">BeritaKu</a>
+
+            <a class="navbar-brand" href="#">BeritaKu</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -84,71 +112,157 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Home</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Trending</a>
                     </li>
                 </ul>
 
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Cari berita..." aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Cari</button>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Cari film">
+                    <button class="btn btn-outline-light">Cari</button>
                 </form>
 
             </div>
         </div>
     </nav>
 
+    <div class="hero-film">
+
+        <img src="assets/fm.jpg">
+
+        <div class="hero-text">
+            <h1>Film </h1>
+
+            <p>
+                Film adalah karya hiburan berupa gambar bergerak yang menceritakan suatu kisah kepada penonton. Melalui cerita, visual, dan suara, film dapat menyampaikan berbagai emosi serta pesan yang menarik untuk dinikmati oleh berbagai kalangan.
+            </p>
+
+            <a href="detail.php?id=1" class="btn btn-warning">
+                Baca Selengkapnya
+            </a>
+        </div>
+
+    </div>
+
     <div class="container mt-5">
+
         <div class="berita-container">
-            <h1>BERITA TERBARU</h1>
+
+            <h2 class="text-center mb-4">BERITA TERBARU</h2>
 
             <div class="row g-4">
-                
-                <a href="detail.php?id=1" style="text-decoration:none; color:black;">
-                    <div class="card">
-                        <img src="picture/1.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Transformers V</h5>
-                            <p class="card-text">Film Transformers V dirilis pada tahun 2017.</p>
-                        </div>
-                    </div>
-                </a>
 
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="gambar2">
-                        <div class="card-body">
-                            <h5 class="card-title">Judul Berita 2</h5>
-                            <p class="card-text">Deskripsi singkat berita kedua.</p>
+                    <a href="detail.php?id=2" class="text-decoration-none text-dark">
+                        <div class="card">
+
+                            <img src="assets/zoo.jpg">
+
+                            <div class="card-body">
+                                <h5>Zootopia 2</h5>
+                                <p>Film Zootopia 2 dirilis pada tahun 2020.</p>
+                            </div>
+
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="gambar3">
-                        <div class="card-body">
-                            <h5 class="card-title">Judul Berita 3</h5>
-                            <p class="card-text">Deskripsi singkat berita ketiga.</p>
+                    <a href="detail.php?id=3" class="text-decoration-none text-dark">
+                        <div class="card">
+
+                            <img src="assets/wc.avif">
+
+                            <div class="card-body">
+                                <h5>Wicked</h5>
+                                <p>Film Wicked dirilis pada tahun 2023.</p>
+                            </div>
+
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="gambar4">
-                        <div class="card-body">
-                            <h5 class="card-title">Judul Berita 4</h5>
-                            <p class="card-text">Deskripsi singkat berita keempat.</p>
+                    <a href="detail.php?id=4" class="text-decoration-none text-dark">
+                        <div class="card">
+
+                            <img src="assets/gz.jpg">
+
+                            <div class="card-body">
+                                <h5>Godzilla x Kong</h5>
+                                <p>Film Godzilla x Kong dirilis pada tahun 2024.</p>
+                            </div>
+
                         </div>
-                    </div>
+                    </a>
                 </div>
 
             </div>
         </div>
     </div>
 
+
+    <div class="container mt-5">
+
+        <h2 class="text-center mb-4">FILM REKOMENDASI</h2>
+
+        <div id="filmSlide" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <img src="assets/km.webp" class="d-block w-100 rounded">
+                        </div>
+
+                        <div class="col-md-4">
+                            <img src="assets/ds.webp" class="d-block w-100 rounded">
+                        </div>
+
+                        <div class="col-md-4">
+                            <img src="assets/gb.jpg" class="d-block w-100 rounded">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <img src="assets/ba.jpg" class="d-block w-100 rounded">
+                        </div>
+
+                        <div class="col-md-4">
+                            <img src="assets/hr.webp" class="d-block w-100 rounded">
+                        </div>
+
+                        <div class="col-md-4">
+                            <img src="assets/s7.png" class="d-block w-100 rounded">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#filmSlide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#filmSlide" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
+```

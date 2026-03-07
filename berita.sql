@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Mar 2026 pada 19.22
+-- Waktu pembuatan: 07 Mar 2026 pada 19.24
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -45,7 +45,10 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id`, `judul`, `slug`, `deskripsi`, `isi`, `gambar`, `tanggal`, `penulis`, `kategori`, `views`) VALUES
-(1, 'Film Transformer terbaru', '121', '13', 'Film Transformers: The Last Knight kembali menghadirkan aksi spektakuler antara Autobots dan Decepticons yang penuh ledakan dan efek visual memukau. Disutradarai oleh Michael Bay, film ini melanjutkan konflik besar antara manusia dan robot raksasa yang kini semakin kompleks dan menegangkan.\r\n\r\nDalam seri kelima ini, kisah berfokus pada Cade Yeager yang kembali terlibat dalam peperangan besar saat Optimus Prime menghilang dan kemudian ditemukan berada di sisi yang berlawanan. Rahasia masa lalu Transformers yang ternyata telah lama terhubung dengan sejarah manusia, termasuk legenda Raja Arthur, menjadi inti cerita yang mengejutkan.\r\n\r\nDibintangi oleh Mark Wahlberg sebagai Cade Yeager, serta kehadiran kembali Optimus Prime dan Bumblebee, film ini menyuguhkan pertarungan epik dengan teknologi CGI canggih dan adegan aksi berskala besar.\r\n\r\nTransformers: The Last Knight tidak hanya menampilkan pertempuran antar robot, tetapi juga mengangkat tema pengkhianatan, persahabatan, dan pengorbanan demi menyelamatkan Bumi dari kehancuran.', 'assets/1.jpg', '2026-03-04 00:13:29', 'febri', 'film', 0);
+(1, 'Film ', '121', '13', 'Film merupakan salah satu bentuk hiburan yang sangat populer di seluruh dunia. Melalui perpaduan gambar bergerak, suara, musik, dan cerita, film mampu menghadirkan berbagai emosi kepada penonton, mulai dari keseruan, ketegangan, hingga haru.\r\n\r\nSeiring perkembangan teknologi, industri film terus berkembang dengan menghadirkan efek visual yang semakin canggih serta cerita yang lebih beragam. Berbagai genre film seperti aksi, komedi, horor, drama, hingga animasi hadir untuk memenuhi selera penonton yang berbeda-beda.\r\n\r\nSaat ini film tidak hanya dapat ditonton di bioskop, tetapi juga melalui berbagai platform digital. Hal ini membuat masyarakat semakin mudah menikmati film kapan saja dan di mana saja sebagai sarana hiburan sekaligus media penyampaian pesan dan cerita.', 'shoot2.jpg', '2026-03-04 00:13:29', 'febri', 'film', 0),
+(2, 'Zootopia 2', 'film ', '2', 'Film animasi Zootopia 2 kembali melanjutkan kisah petualangan seru di kota modern yang dihuni berbagai jenis hewan. Film ini merupakan sekuel dari film populer Zootopia 2 yang sebelumnya sukses menarik perhatian penonton di seluruh dunia dengan cerita yang menarik dan penuh pesan moral.\r\n\r\nCerita dalam Zootopia 2 masih mengikuti petualangan polisi kelinci pemberani, Judy Hopps, bersama rekannya si rubah cerdas Nick Wilde. Kali ini mereka kembali bekerja sama untuk memecahkan misteri baru yang mengancam kedamaian kota Zootopia.\r\n\r\nFilm produksi Walt Disney Animation Studios ini diperkirakan akan menghadirkan cerita yang lebih seru, karakter baru yang menarik, serta visual animasi yang semakin modern. Selain hiburan, film ini juga tetap membawa pesan tentang persahabatan, keberagaman, dan kerja sama dalam menghadapi berbagai masalah.\r\n\r\nDengan cerita yang segar dan humor khasnya, Zootopia 2 diharapkan dapat kembali memikat penonton dari berbagai kalangan, terutama para penggemar film animasi di seluruh dunia.\r\n\r\n', 'zoo2.jpeg', '2026-03-08 00:01:47', 'febri', 'film', 0),
+(3, 'wicked', 'film', '3', 'Film musikal fantasi Wicked menghadirkan kisah menarik tentang asal-usul dua penyihir terkenal dari dunia Oz sebelum peristiwa dalam cerita The Wizard of Oz. Film ini mengangkat cerita persahabatan antara dua tokoh utama yang memiliki kepribadian sangat berbeda.\r\n\r\nCerita berfokus pada Elphaba, seorang gadis berkulit hijau yang sering disalahpahami oleh orang-orang di sekitarnya, dan Glinda, gadis populer yang ceria dan ambisius. Pertemuan mereka di universitas sihir di negeri Oz membuat keduanya menjalin persahabatan yang kuat, meskipun pada akhirnya takdir membawa mereka ke jalan yang berbeda.\r\n\r\nFilm ini dibintangi oleh Ariana Grande sebagai Glinda dan Cynthia Erivo sebagai Elphaba. Dengan lagu-lagu musikal yang terkenal serta visual dunia fantasi yang memukau, Wicked menjadi salah satu film musikal yang paling dinantikan oleh para penggemar film dan teater musikal.', 'wc2.webp', '2026-03-08 00:25:31', 'febri', 'film', 0),
+(4, 'Godzilla x Kong The New Empire', 'film', '4', 'Film musikal fantasi Wicked menghadirkan kisah menarik tentang asal-usul dua penyihir terkenal dari dunia Oz sebelum peristiwa dalam cerita The Wizard of Oz. Film ini mengangkat cerita persahabatan antara dua tokoh utama yang memiliki kepribadian sangat berbeda.\r\n\r\nCerita berfokus pada Elphaba, seorang gadis berkulit hijau yang sering disalahpahami oleh orang-orang di sekitarnya, dan Glinda, gadis populer yang ceria dan ambisius. Pertemuan mereka di universitas sihir di negeri Oz membuat keduanya menjalin persahabatan yang kuat, meskipun pada akhirnya takdir membawa mereka ke jalan yang berbeda.\r\n\r\nFilm ini dibintangi oleh Ariana Grande sebagai Glinda dan Cynthia Erivo sebagai Elphaba. Dengan lagu-lagu musikal yang terkenal serta visual dunia fantasi yang memukau, Wicked menjadi salah satu film musikal yang paling dinantikan oleh para penggemar film dan teater musikal.', 'gz2.jpg', '2026-03-08 00:27:48', 'Febri', 'film', 0);
 
 --
 -- Indexes for dumped tables
@@ -65,7 +68,7 @@ ALTER TABLE `berita`
 -- AUTO_INCREMENT untuk tabel `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
