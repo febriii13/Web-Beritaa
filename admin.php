@@ -1,5 +1,26 @@
+<?php
+    session_start();
+    include "koneksi.php";
+
+    if(isset($_POST['login'])){
+
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $query = mysqli_query($conn,"SELECT * FROM admin WHERE username='$username' AND password='$password'");
+        $cek = mysqli_num_rows($query);
+
+        if($cek > 0){
+            $_SESSION['admin'] = true;
+            header("Location: dasboradmin.php");
+            exit;
+        }else{
+            echo "<script>alert('Username atau Password salah');</script>";
+        }
+    }
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +32,21 @@
 
     <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
     
-    <form method="POST" class="bg-white p-4 rounded shadow" style="width:300px;">
+        <form method="POST" class="bg-white p-4 rounded shadow" style="width:300px;">
 
-        <h4 class="text-center mb-3">Login Admin</h4>
+            <h4 class="text-center mb-3">Login Admin</h4>
 
-        <input type="text" name="username" class="form-control mb-3" placeholder="Username">
+            <input type="text" name="username" class="form-control mb-3" placeholder="Username">
 
-        <input type="password" name="password" class="form-control mb-3" placeholder="Password">
+            <input type="password" name="password" class="form-control mb-3" placeholder="Password">
 
-        <button name="login" class="btn btn-dark w-100">Login</button>
+            <button name="login" class="btn btn-dark w-100">Login</button>
+            <div class="text-center mt-3">
+                <a href="index.php" class="btn btn-link">Back to Home</a>
+            </div>
+        </form>
+    </div>
 
-    </form>
-
-</div>
     </form>
 
         </div>
